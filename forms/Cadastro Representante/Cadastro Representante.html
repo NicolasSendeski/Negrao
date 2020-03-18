@@ -1,16 +1,131 @@
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
-	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
-	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
-	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <script src="style.css"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 <div class="fluig-style-guide">
-<form name="form" role="form">
+    <form name="form" role="form">
+        <!-- Link das Tabs	-->
+        <div class="tab">
+            <button class="tablinks" onclick="abrirAba($event, 'representante')">Representante</button>
+            <button class="tablinks" onclick="abrirAba($event, 'empresa')">Empresa</button>
+            <button class="tablinks" onclick="abrirAba($event, 'Dados')">Outros Dados</button>
+            <button class="tablinks" onclick="abrirAba($event, 'Documentos')">Documentos</button>
+        </div>
+        <!-- Conteudo das Tabs -->
+        <div id="representante" class="tabcontent">
+            <div class="container">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="nome_receita">Nome</label>
+                            <input type="text" name="nome_receita" id="nome_receita" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nome_receita">CPF</label>
+                            <input type="text" name="cpf" id="cpf" class="form-control" mask="000.000.000-00">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nascimento">Nascimento</label>
+                            <input type="text" name="nascimento" id="nascimento" class="form-control" mask="00/00/0000">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="rg">RG</label>
+                            <input type="text" name="rg" id="rg" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="org_expedidor">Orgão Expedidor</label>
+                            <input type="text" name="org_expedidor" id="org_expedidor" class="form-control">
+                        </div>
+                        <div class="col-md-8">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="email" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" name="telefone" id="telefone" class="form-control" mask="(00)00000-0000">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="celular">Celular</label>
+                            <input type="text" name="celular" id="celular" class="form-control" mask="(00)00000-0000">
+                        </div>
+                        <div class="col-md-8">
+                            <label for="num_core">Número CORE</label>
+                            <input type="text" name="num_core" id="num_core" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="uf_core">UF CORE</label>
+                            <input type="text" name="uf_core" id="uf_core" class="form-control" mask="AA">
+                        </div>
+                        <div class="container">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="logradouro">Logradouro</label>
+                                        <input type="text" name="logradouro" id="logradouro" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="numero">Número</label>
+                                        <input type="text" name="numero" id="numero" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="complemento">Complemento</label>
+                                        <input type="text" name="complemento" id="complemento" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="cep">CEP</label>
+                                        <input type="text" name="cep" id="cep" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" name="bairro" id="bairro" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="uf">UF</label>
+                                        <input type="text" name="uf" id="uf" class="form-control">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" name="cidade" id="cidade" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</form>
+        <div id="empresa" class="tabcontent">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="teste">teste</label>
+                        <input type="text" name="teste" id="teste" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Dados" class="tabcontent">
+                <div>
+
+                </div>
+            </div>
+
+            <div id="Documentos" class="tabcontent">
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>
