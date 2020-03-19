@@ -13,115 +13,156 @@
 <div class="fluig-style-guide">
     <form name="form" role="form">
         <!-- Link das Tabs	-->
-        <div class="tab">
-            <button class="tablinks" onclick="abrirAba($event, 'representante')">Representante</button>
-            <button class="tablinks" onclick="abrirAba($event, 'empresa')">Empresa</button>
-            <button class="tablinks" onclick="abrirAba($event, 'Dados')">Outros Dados</button>
-            <button class="tablinks" onclick="abrirAba($event, 'Documentos')">Documentos</button>
-        </div>
-        <!-- Conteudo das Tabs -->
-        <div id="representante" class="tabcontent">
-            <div class="container">
+        <div class="container-fluid" id="container-form">
+            <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label for="nome_receita">Nome</label>
-                            <input type="text" name="nome_receita" id="nome_receita" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="nome_receita">CPF</label>
-                            <input type="text" name="cpf" id="cpf" class="form-control" mask="000.000.000-00">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="nascimento">Nascimento</label>
-                            <input type="text" name="nascimento" id="nascimento" class="form-control" mask="00/00/0000">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="rg">RG</label>
-                            <input type="text" name="rg" id="rg" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="org_expedidor">Orgão Expedidor</label>
-                            <input type="text" name="org_expedidor" id="org_expedidor" class="form-control">
-                        </div>
-                        <div class="col-md-8">
-                            <label for="email">E-mail</label>
-                            <input type="text" name="email" id="email" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" name="telefone" id="telefone" class="form-control" mask="(00)00000-0000">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="celular">Celular</label>
-                            <input type="text" name="celular" id="celular" class="form-control" mask="(00)00000-0000">
-                        </div>
-                        <div class="col-md-8">
-                            <label for="num_core">Número CORE</label>
-                            <input type="text" name="num_core" id="num_core" class="form-control">
-                        </div>
-                        <div class="col-md-4">
-                            <label for="uf_core">UF CORE</label>
-                            <input type="text" name="uf_core" id="uf_core" class="form-control" mask="AA">
-                        </div>
-                        <div class="container">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li><a href="#tab_representante" id="toggle_representante" data-toggle="tab">Representante</a>
+                        </li>
+                        <li><a href="#tab_empresa" id="toggle_empresa" data-toggle="tab">Empresa</a></li>
+                        <li><a href="#tab_dados" id="toggle_dados" data-toggle="tab">Outros Dados</a></li>
+                        <li><a href="#tab_documentos" id="toggle_documentos" data-toggle="tab">Documento</a>
+                        </li>
+                    </ul>
+                    <!-- Conteudo das Tabs -->
+                    <div class="tab-content">
+                        <div id="tab_representante" class="tab-pane">
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label for="logradouro">Logradouro</label>
-                                        <input type="text" name="logradouro" id="logradouro" class="form-control">
+                                        <label for="nome_receita">Nome</label>
+                                        <input type="text" name="nome_receita" id="nome_receita"
+                                               class="form-control" readonly>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="numero">Número</label>
-                                        <input type="text" name="numero" id="numero" class="form-control">
+                                        <label for="nome_receita">CPF</label>
+                                        <input type="text" name="cpf" id="cpf" class="form-control"
+                                               mask="000.000.000-00" readonly>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="complemento">Complemento</label>
-                                        <input type="text" name="complemento" id="complemento" class="form-control">
+                                        <label for="nascimento">Nascimento</label>
+                                        <input type="text" name="nascimento" id="nascimento" class="form-control"
+                                               mask="00/00/0000">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="cep">CEP</label>
-                                        <input type="text" name="cep" id="cep" class="form-control">
+                                        <label for="rg">RG</label>
+                                        <input type="text" name="rg" id="rg" class="form-control">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="bairro">Bairro</label>
-                                        <input type="text" name="bairro" id="bairro" class="form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="uf">UF</label>
-                                        <input type="text" name="uf" id="uf" class="form-control">
+                                        <label for="org_expedidor">Orgão Expedidor</label>
+                                        <input type="text" name="org_expedidor" id="org_expedidor"
+                                               class="form-control">
                                     </div>
                                     <div class="col-md-8">
-                                        <label for="cidade">Cidade</label>
-                                        <input type="text" name="cidade" id="cidade" class="form-control">
+                                        <label for="email">E-mail</label>
+                                        <input type="text" name="email" id="email" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="telefone">Telefone</label>
+                                        <input type="text" name="telefone" id="telefone" class="form-control"
+                                               mask="(00)00000-0000">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="celular">Celular</label>
+                                        <input type="text" name="celular" id="celular" class="form-control"
+                                               mask="(00)00000-0000">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label for="num_core">Número CORE</label>
+                                        <input type="text" name="num_core" id="num_core" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="uf_core">UF CORE</label>
+                                        <input type="text" name="uf_core" id="uf_core" class="form-control"
+                                               mask="AA">
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="logradouro">Logradouro</label>
+                                                <input type="text" name="logradouro" id="logradouro"
+                                                       class="form-control">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="numero">Número</label>
+                                                <input type="text" name="numero" id="numero"
+                                                       class="form-control">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="complemento">Complemento</label>
+                                                <input type="text" name="complemento" id="complemento"
+                                                       class="form-control">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="cep">CEP</label>
+                                                <input type="text" name="cep" id="cep" class="form-control">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="bairro">Bairro</label>
+                                                <input type="text" name="bairro" id="bairro"
+                                                       class="form-control">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="uf">UF</label>
+                                                <input type="text" name="uf" id="uf" class="form-control">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <label for="cidade">Cidade</label>
+                                                <input type="text" name="cidade" id="cidade"
+                                                       class="form-control">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div id="tab_empresa" class="tab-pane">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label for="razao_social">Razão Social</label>
+                                        <input type="text" name="razao_social" id="razao_social" class="form-control" readonly>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="cnpjp">CNPJ</label>
+                                        <input type="text" name="cnpjp" id="cnpjp" class="form-control" mask="00.000.000/0000-00" readonly>
+                                    </div>
+                                    <div class="custom-checkbox custom-checkbox-primary">
+                                        <input type="checkbox" id="checkbox-1">
+                                        <label for="checkbox-1">Optante Simples Nacional</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="insc_municipal">Insc. Municipal</label>
+                                        <input type="text" name="insc_municipal" id="insc_municipal" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="num_alvara">Número Alvará</label>
+                                        <input type="text" name="num_alvara" id="num_alvara" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="emi_alvara">Emissão Alvará</label>
+                                        <input type="text" name="emi_alvara" id="emi_alvara" class="form-control" mask="00/00/0000">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="val_alvara">Validade Alvará</label>
+                                        <input type="text" name="val_alvara" id="val_alvara" class="form-control" mask="00/00/0000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab_dados" class="tab-pane">
+                                <div>
+
+                                </div>
+                            </div>
+
+                            <div id="_tab_documentos" class="tab-pane">
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="empresa" class="tabcontent">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="teste">teste</label>
-                        <input type="text" name="teste" id="teste" class="form-control">
-                    </div>
-                </div>
-            </div>
-
-            <div id="Dados" class="tabcontent">
-                <div>
-
-                </div>
-            </div>
-
-            <div id="Documentos" class="tabcontent">
-                <div>
-
                 </div>
             </div>
         </div>
