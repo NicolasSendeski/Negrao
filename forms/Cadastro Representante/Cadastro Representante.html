@@ -23,6 +23,8 @@
                         <li><a href="#tab_dados" id="toggle_dados" data-toggle="tab">Outros Dados</a></li>
                         <li><a href="#tab_documentos" id="toggle_documentos" data-toggle="tab">Documento</a>
                         </li>
+                        <li><a href="#tab_contratos" id="toggle_contratos" data-toggle="tab">Contratos</a>
+                        </li>
                     </ul>
                     <!-- Conteudo das Tabs -->
                     <div class="tab-content">
@@ -269,7 +271,9 @@
                                             <input type="radio" name="empresa_radio" id="dados_tipo_conta_radio">
                                             <label for="dados_tipo_conta_radio">Poupança</label>
                                         </div>
-                                        <p><b>Obresvação:</b>Somente conta de Pessoa Juridica, de preferencia nos bancos Caixa Economica Federal, Banco do Brasil, Bradesco, Itaú ou Barrisul(RS) </p>
+                                        <p><b>Obresvação:</b>Somente conta de Pessoa Juridica, de preferencia nos bancos
+                                            Caixa Economica Federal, Banco do Brasil, Bradesco, Itaú ou Barrisul(RS)
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="panel panel-heading">
@@ -277,9 +281,19 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="teste1">Teste</label>
-                                            <input type="text" name="teste1" id="teste1"
+                                        <div class="col-md-6">
+                                            <label for="dados_nome">Nome Completo</label>
+                                            <input type="text" name="dados_nome" id="dados_nome"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="dados_cpf">CPF</label>
+                                            <input type="text" name="dados_cpf" id="dados_cpf"
+                                                   class="form-control" mask="000.000.000-00">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="dados_crc">CRC</label>
+                                            <input type="text" name="dados_crc" id="dados_crc"
                                                    class="form-control">
                                         </div>
                                     </div>
@@ -290,9 +304,14 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <label for="teste2">Teste</label>
-                                            <input type="text" name="teste2" id="teste2"
-                                                   class="form-control">
+                                            <label for="dados_empresa">Empresa</label>
+                                            <input type="text" name="dados_empresa" id="dados_empresa"
+                                                   class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="dados_macro_regial">Macro Regiao</label>
+                                            <input type="text" name="dados_macro_regial" id="dados_macro_regial"
+                                                   class="form-control" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -301,6 +320,59 @@
                         <div id="tab_documentos" class="tab-pane">
                             <div>
 
+                            </div>
+                        </div>
+                        <div id="tab_contratos" class="tab-pane">
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">
+                                    <h3 class="panel-title">Tablet</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="contatos_descritivo">Descritivo</label>
+                                            <input type="text" name="contatos_descritivo" id="contatos_descritivo"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="contratos_nm_serie">Número de Série</label>
+                                            <input type="text" name="contratos_nm_serie" id="contratos_nm_serie"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="contratos_nm_patrimonio">Número de Patrimonio</label>
+                                            <input type="text" name="contratos_nm_patrimonio" id="contratos_nm_patrimonio"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="contratos_modelo_contrato">Modelo de Contrato</label>
+                                            <input type="text" name="contratos_modelo_contrato" id="contratos_modelo_contrato"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="contratos_contrato_comodato">Contrato de Comodato</label>
+                                            <button type="button" name="contratos_contrato_comodato" id="contratos_contrato_comodato"
+                                                    class="btn btn-secondary"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-heading">
+                                    <h3 class="panel-title">Contrato de Serviço</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="contratos_modelo_contrato_servico">Modelo de Contrato</label>
+                                            <input type="text" name="contratos_modelo_contrato_servico" id="contratos_modelo_contrato_servico"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="contratos_contrato_servico">Contrato de serviço</label>
+                                            <button type="button" name="contratos_contrato_servico" id="contratos_contrato_servico"
+                                                    class="btn btn-secondary"></button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
