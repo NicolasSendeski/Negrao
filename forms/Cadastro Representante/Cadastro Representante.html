@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <link type="text/css" rel="stylesheet" href="./style.css"/>
     <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
@@ -308,7 +308,8 @@
                                             <input type="radio" name="empresa_radio" id="dados_tipo_conta_radio">
                                             <label for="dados_tipo_conta_radio">Poupança</label>
                                         </div>
-                                        <p><b>Obresvação:</b>Somente conta de Pessoa Juridica, de preferencia nos bancos
+                                        <p><b class="margin-left">Observação:</b>Somente conta de Pessoa Juridica, de
+                                            preferencia nos bancos
                                             Caixa Economica Federal, Banco do Brasil, Bradesco, Itaú ou Barrisul(RS)
                                         </p>
                                     </div>
@@ -355,8 +356,86 @@
                             </div>
                         </div>
                         <div id="tab_documentos" class="tab-pane">
-                            <div>
-
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">
+                                    <h3 class="panel-title">Documentos</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="cold-md-3">
+                                            <p>Carta de Solicitação</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_solicitacao_visu" id="documentos_solicitacao_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_solicitacao_anexar"
+                                                   id="documentos_solicitacao_anexar">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Documento de ifentificação do Representante</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_identificacao_visu" id="documentos_identificacao_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_identificacao_anexa"
+                                                   id="documentos_identificacao_anexa">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Documento Bancário</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_bancaraio_visu" id="documentos_bancaraio_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_bancario_anexar"
+                                                   id="documentos_bancario_anexar">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Core do Representante</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_core_visu" id="documentos_core_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_core_anexar"
+                                                   id="documentos_core_anexar">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Core da Empresa</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_empresa_visu" id="documentos_empresa_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_empresa_anexar"
+                                                   id="documentos_empresa_anexar">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Inscrição municipal ou Alvará</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_alvara_visu" id="documentos_alvara_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_alvara_anexar"
+                                                   id="documentos_alvara_anexar">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Contrato Social</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_contrato_visu" id="documentos_contrato_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_contrato_anexar"
+                                                   id="documentos_contrato_anexar">
+                                        </div>
+                                        <div class="cold-md-3">
+                                            <p>Comprovante de endereço para correspondência</p>
+                                            <input class="btn btn-primary margem-top-btn" type="submit"
+                                                   value="Visualizar"
+                                                   name="documentos_comprovante_visu" id="documentos_comprovante_visu">
+                                            <input class="btn btn-primary margem-top-btn" type="submit" value="Anexar"
+                                                   name="documentos_comprovante_anexar"
+                                                   id="documentos_comprovante_anexar">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="tab_contratos" class="tab-pane">
